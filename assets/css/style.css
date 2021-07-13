@@ -13,7 +13,7 @@ background-image: url(/assets/images/jungle.jpg);
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 120vh;
+  height: 160vh;
   color: #fff;
 }
 
@@ -30,15 +30,12 @@ h1 {
 /* Jumbotron */
 .jumbotron {
     background-color: rgba(31, 83, 46, 0.7);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 /* Home Page */
 .box-index {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display:flex;
     justify-content: center;
@@ -47,25 +44,34 @@ h1 {
 
 /* Buttons */
 .btn {
-    font-size: 3.6rem;
-    padding: 0.5rem 0;
-    width: 12rem;
+    font-size: 2rem;
+    padding: 1rem 6rem;
     margin-bottom: 1.5rem;
     text-decoration: none;
     color: #fff;
     background-color: rgb(79,133,91);
-    border-radius: 50%;
+    border-radius: 25px 75px;
+    
+    
   }
 
 /* Play page */
   .box-play {
-    height: 100vh;
+    height: 75vh;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
+  #question{
+    font-size: 3rem;
+    margin-left: 20px;
+  }
 
+/* media queries */
 
+@media (min-width: 768px) { 
+
+}
 
