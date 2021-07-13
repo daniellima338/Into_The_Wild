@@ -11,13 +11,27 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 </head>
 <body>
-    <h1 class="offset-3 col-6 text-center page-title jumbotron" id="question">Question</h1> 
-    
-    <div class="box-play text-center row">
-        <button class="col-2 btn btn-primary button-style" id="answer_1">Answer 1</button>
-        <button class="col-2 btn btn-primary button-style" id="answer_2">Answer 2</button>
-        <button class="col-2 btn btn-primary button-style" id="answer_3">Answer 3</button>
-        <button class="col-2 btn btn-primary button-style" id="answer_4">Answer 4</button>
+    <div id="game" class="box-play text-center row">
+        <div class="col-12 mt-4">
+            <p class="scoreboard" id="score">0</p>
+        </div>
+        <div class="col-12 mt-4">
+        <h2 id="question" class="jumbotron">0</h2>
+        </div>
+        <div class="team-members text-center">
+            <div class="col-12 mt-4">
+                <button class="btn btn-primary button-style" id="answer_1">Answer 1</button>
+            </div>
+            <div class="col-12 mt-4">
+                <button class="btn btn-primary button-style" id="answer_2">Answer 2</button>
+            </div>
+            <div class="col-12 mt-4">
+                <button class="btn btn-primary button-style" id="answer_3">Answer 3</button>
+            </div>
+            <div class="col-12 mt-4">
+                <button class="btn btn-primary button-style" id="answer_4">Answer 4</button>
+            </div>
+        </div>
     </div>
 
     <footer class="container-fluid text-center fixed-bottom">
