@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* global */
+html {
+    font-size: 62.5%;
+}
+
+body {
+background-image: url(/assets/images/jungle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 110vh;
+  color: #fff;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+/* Title */
+.page-title {
+    position: relative;
+    top: 20%;
+}
+
+.jumbotron {
+    background-color: rgba(31, 83, 46, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box {
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 3.6rem;
+    padding: 0.5rem 0;
+    width: 6rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: #e7fff4;
+    background-color: rgb(79,133,91);
+    border-radius: 50px 50px;
+  }
+
+
+
+
