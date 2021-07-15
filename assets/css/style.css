@@ -84,6 +84,15 @@ h1 {
     
   }
 
+/* coundown page */
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 /* media queries */
 
 @media (min-width: 768px) { 
