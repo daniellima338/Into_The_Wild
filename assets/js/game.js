@@ -21,6 +21,9 @@ function showQuestion(data) {
 
 // Used to recycle the correct answer everytime. CANT GET THE ANSWERS TO DISPLAY
 function setupAnswers(results) {
+    let isCorrect = results.correct_answer;
+    let incorrect_answers = results.incorrect_answers;
+
     $("#question").text(results.question)
     // sort((a,b)) => 0.5 - Math.random()) is used to always choose a random place to put the correct answer. Solution found on StackOverflow
     
@@ -31,6 +34,15 @@ function setupAnswers(results) {
     var i = 1;
     answers.forEach(function (answer) {
     $("#answer_" + i).text(answer)
-    i++
-    });
-}
+    i++;
+    }) 
+    if (isCorrect) {
+        $("#score").innertext = $("#score") + 1;
+    }
+    else if (incorrect_answers) {
+        $("#incorrect").innertext = $("#incorrect") + 1;
+    }
+};
+
+
+
