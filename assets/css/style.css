@@ -14,7 +14,7 @@ background-image: url(/assets/images/jungle.jpg);
   margin: 0;
   width: 100vw;
   height: 160vh;
-  color: #fff;
+  color: #f3fff3;
 }
 
 h1 {
@@ -47,7 +47,7 @@ h1 {
     padding: 1rem 6rem;
     margin-bottom: 1.5rem;
     text-decoration: none;
-    color: #fff;
+    color: #f3fff3;
     background-color: rgb(79,133,91);
     border-radius: 25px 75px;
     
@@ -59,7 +59,7 @@ h1 {
 }
 
 .btn-primary:hover {
-  color: #fff;
+  color: #f3fff3;
   background-color: #1b442a;
   border-color: #f3fff3;
 }
@@ -78,12 +78,18 @@ h1 {
     margin-left: 20px;
   }
 
+  .scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* footer styles */
 
   .footer-style a {
     font-size: 2rem;
     text-decoration: none;
-    color: #fff;
+    color: #f3fff3;
   }
 
   .overlay {
@@ -105,7 +111,5 @@ h1 {
 
 /* media queries */
 
-@media (min-width: 768px) { 
 
-}
 
