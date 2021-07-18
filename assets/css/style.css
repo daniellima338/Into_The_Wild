@@ -54,6 +54,16 @@ h1 {
     
   }
 
+.btn-primary {
+  border-color: #f3fff3;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1b442a;
+  border-color: #f3fff3;
+}
+
 /* Play page */
   .box-play {
     height: 75vh;
