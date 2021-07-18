@@ -13,13 +13,10 @@
 <body>
     <div id="game" class="box-play text-center row">
         <div class="col-12 mt-4">
-            <p class="scoreboard" id="score">0</p>
+            <h2 id="question" class="jumbotron"></h2>
         </div>
-        <div class="col-12 mt-4">
-        <h2 id="question" class="jumbotron">0</h2>
-        </div>
-        <div class="team-members text-center">
-            <div class="col-12 mt-4">
+        <div>
+            <div class="col-12">
                 <button class="btn btn-primary button-style" id="answer_1">Answer 1</button>
             </div>
             <div class="col-12 mt-4">
@@ -33,6 +30,10 @@
             </div>
         </div>
     </div>
+    <div class="score-area row">
+		<p class="scores">Correct Answers: <span id="score">0</span></p>
+		<p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+	</div>
 
     <footer class="row container-fluid text-center fixed-bottom overlay">  
         <div class="col-4 footer-style">
