@@ -45,6 +45,13 @@ background-color: #1b442a;
 border-color: #f3fff3;
 }
 
+.btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  background-color: #1b442a;
+  border-color: #f3fff3;
+  box-shadow: 0 0 0 0.2rem rgb(31 83 46 / 70%);
+}
+
 /* Title */
 .page-title {
     position: relative;
