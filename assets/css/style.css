@@ -13,7 +13,7 @@ background-image: url(/assets/images/jungle.jpg);
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 160vh;
+  height: 120vh;
   color: #f3fff3;
 }
 
@@ -21,68 +21,102 @@ h1 {
     font-size: 3.6rem;
 }
 
+
+/* Buttons */
+.btn {
+  font-size: 2rem;
+  padding: 1rem 6rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: #f3fff3;
+  background-color: rgb(79,133,91);
+  border-radius: 25px 75px;
+  
+  
+}
+
+.btn-primary {
+border-color: #f3fff3;
+}
+
+.btn-primary:hover {
+color: #f3fff3;
+background-color: #1b442a;
+border-color: #f3fff3;
+}
+
 /* Title */
 .page-title {
     position: relative;
-    top: 20%;
+    top: 10%;
 }
 
 /* Jumbotron */
 .jumbotron {
     background-color: rgba(31, 83, 46, 0.7);  
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Home Page */
 .box-index {
-    height: 120vh;
+    height: 60vh;
     width: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Buttons */
-.btn {
-    font-size: 2rem;
-    padding: 1rem 6rem;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: #f3fff3;
-    background-color: rgb(79,133,91);
-    border-radius: 25px 75px;
-    
-    
-  }
-
-.btn-primary {
-  border-color: #f3fff3;
+/* coundown page */
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.btn-primary:hover {
+/* Contact page */
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 800;
+
   color: #f3fff3;
-  background-color: #1b442a;
-  border-color: #f3fff3;
+  background-color: transparent;
+  border: 2px solid #ced4da;
+  margin: 5px;
+}
+
+.box-contact {
+  height: 80vh;
+  width: 80%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Play page */
-  .box-play {
-    height: 75vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.box-play {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #question{
-    font-size: 3rem;
-    margin-left: 20px;
-  }
+#question {
+  font-size: 3rem;
+  margin-left: 20px;
+}
 
-  .scores {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.scores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
   /* footer styles */
 
@@ -100,16 +134,8 @@ h1 {
     
   }
 
-/* coundown page */
-.center {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
-/* media queries */
+
 
 
 
