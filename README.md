@@ -272,7 +272,11 @@ You can find my wireframes below:
 
 ## **Bugs**
 
-### 1
+### 1 Could not change anything within the modal for the tutorial. 
+## **Solution** 
+# used !important to make my custom style a priority. tried other solutions, but this was the only one that worked. 
+
+
 
 ### 2
 
