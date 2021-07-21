@@ -30,12 +30,13 @@ function setupQuiz(data){
     console.log(data)            
 }
 
+//Used to generate the answers for each question
 function setupAnswers(current){
    $("#question").text(current.question)
 
     answers = [current.correct_answer]
                     .concat(current.incorrect_answers)
-                    .sort((a, b) => 0.5 - Math.random());
+                    .sort((_a, _b) => 0.5 - Math.random());
     
     var i = 1;
     answers.forEach(function (answer) {
@@ -44,4 +45,28 @@ function setupAnswers(current){
     })
      
 }
+// Cant get it working
+//  function incrementScore(){
+//      var isCorrect = results.correct_answer;
+//      var incorrect_answers = results.incorrect_answers;
+//      $("button").click(function() {
+//         if (isCorrect) {
+//              $("#score").innerHTML = $("#score") + 1;
+//          } else if (incorrect_answers) {
+//             $("#incorrect").innerHTML = $("#incorrect") + 1;
+//         }
+//      })
 
+//NOT WORKING
+function showCorrectAnswer() {
+    var isCorrect = results.correct_answer;
+    var incorrect_answers = results.incorrect_answers;
+
+    $("button").click(function() {
+        if (isCorrect) {
+            this.style.backgroundColor = "#a8f1b8"; //green
+        } else if (incorrect_answers){
+            this.style.backgroundColor = "#d82929"; //red
+        }
+    }
+    )}
