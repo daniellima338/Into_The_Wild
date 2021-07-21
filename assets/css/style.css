@@ -80,6 +80,21 @@ border-color: #f3fff3;
   font-size: 3rem;
   font-weight: 700;
 }
+
+/* progressbar styles */
+#progressbar {
+  background-color: black;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar > div {
+   background-color: orange;
+   width: 100%; /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
+}
+
 /* Home Page */
 .box-index {
     height: 60vh;
