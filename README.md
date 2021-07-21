@@ -124,21 +124,26 @@ First I created a wireframe for mobile, as the approach is mobile first. Thereaf
 You can find my wireframes below:
 
 #### [Desktop Wireframes]
-    [Home page](wireframes/desktop_1.png)
-    [Quiz page](wireframes/desktop_2.png)
-    [Tutorial page](wireframes/desktop_3.png)
+    [Home page](wireframes/desktop/home-page.png)
+    [Quiz page](wireframes/desktop/play-page.png)
+    [Tutorial page](wireframes/desktop/tutorial-page.png)
+    [Countdown page](wireframes/desktop/countdown-page.png)
+    [Contact page](wireframes/desktop/contact-page.png)
 
 #### [Tablet Wireframes]
-    [Home page](wireframes/tablet_1.png)
-    [Quiz page](wireframes/tablet_2.png)
-    [Tutorial page](wireframes/tablet_3.png)
+    [Home page](wireframes/tablet/tablet-home-page.png)
+    [Quiz page](wireframes/tablet/tablet-play-page.png)
+    [Tutorial page](wireframes/tablet/tablet-tutorial-page.png)
+    [Countdown page](wireframes/tablet/tablet-countdown-page.png)
+    [Contact page](wireframes/tablet/tablet-contact-page.png)
 
 #### [Mobile Wireframes]
-    [Home page](wireframes/mobile_1.png)
-    [Quiz page](wireframes/mobile_2.png)
-    [Tutorial page](wireframes/mobile_3.png)
+    [Home page](wireframes/mobile/mobile-home-page.png)
+    [Quiz page](wireframes/mobile/mobile-play-page.png)
+    [Tutorial page](wireframes/mobile/mobile-tutorial-page.png)
+    [Countdown page](wireframes/mobile/mobile-countdown-page.png)
+    [Contact page](wireframes/mobile/mobile-contact-page.png)
 
-### **Changes made to wireframes**
 
 [Back to Top](#table-of-contents)
 
@@ -189,6 +194,9 @@ You can find my wireframes below:
 ## **Bugs**
 * Answer 4 was not displaying due to a bug in the loop interating through the questions. Fixed it by starting the loop at 1 instead of 0. 
 * Score is not incrementing as expected. Had to change the design of the system. 
+* 1 Could not change anything within the modal for the tutorial. 
+ **Solution** 
+* used !important to make my custom style a priority. tried other solutions, but this was the only one that worked. 
 
 [Back to Top](#table-of-contents)
 
@@ -271,12 +279,6 @@ You can find my wireframes below:
 <a></a>
 
 ## **Bugs**
-
-### 1 Could not change anything within the modal for the tutorial. 
-## **Solution** 
-# used !important to make my custom style a priority. tried other solutions, but this was the only one that worked. 
-
-
 
 ### 2
 
