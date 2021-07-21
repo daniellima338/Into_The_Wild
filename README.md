@@ -77,7 +77,9 @@ The feel of the game should be to step into a jungle and then get to know the di
 
 * #f3fff3: Is a smooth white color that is used for the text and for the outline of the categories. It fits well with the green color, and is easy to read. 
 
-* #D85856: Is used for when a answer is wrong in the quiz. 
+* #A8F1B8: Used when a answer is correct in the quiz. It is a much more green color than the other green colors. 
+
+* #D82929: Is used for when a answer is wrong in the quiz. 
 
 I have used to contract checker on Coolors in order to make sure that the contract is sufficient.
 This way my content will be easily readable. 
