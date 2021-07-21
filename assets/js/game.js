@@ -8,6 +8,11 @@ $.ajax({
     }
 });
 
+// Globale Variables
+
+var current_question_id = 0;
+var quizData;
+var life = 100;
 
 // Used to generate random answer. Taken from stackoverflow: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 
@@ -17,17 +22,21 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Used to generate new question everytime an answer is clicked
+// Used to set up the quiz
 function setupQuiz(data){
-
-    var current_question_id = 0;
+    quizData = data
     setupAnswers(data[current_question_id])
+    console.log(quizData)
+};
 
-    $("button").click(function() {
-        current_question_id++
-        setupAnswers(data[current_question_id])
-    });
-    console.log(data)            
+// Used to trigger next question with a delay, 
+// so the user is able to see if he answered right or wrong
+function triggerNextQuestion() {
+    var delayTrigger = 2000;
+        setTimeout(function() {
+            current_question_id++
+            setupAnswers(quizData[current_question_id])
+        }, delayTrigger);
 }
 
 //Used to generate the answers for each question
@@ -40,11 +49,12 @@ function setupAnswers(current){
     
     var i = 1;
     answers.forEach(function (answer) {
+        $("#answer_" + i).removeAttr("style");
         $("#answer_" + i).text(answer)  
         i++
     })
-     
-}
+    showCorrectAnswer(current.correctAnswer)    
+};
 // Cant get it working
 //  function incrementScore(){
 //      var isCorrect = results.correct_answer;
@@ -58,15 +68,39 @@ function setupAnswers(current){
 //      })
 
 //NOT WORKING
-function showCorrectAnswer() {
-    var isCorrect = results.correct_answer;
-    var incorrect_answers = results.incorrect_answers;
-
+function showCorrectAnswer(correct_answer) {
     $("button").click(function() {
-        if (isCorrect) {
+        selectedAnswer = $(this).text()
+
+        if (correct_answer == selectedAnswer) {
             this.style.backgroundColor = "#a8f1b8"; //green
-        } else if (incorrect_answers){
+        } else {
             this.style.backgroundColor = "#d82929"; //red
+            life -= 25;
+        }
+        $("button").unbind("click"); //unbind is used to reset the color
+
+        //losing the game case
+
+        if (life == 0){
+            $("#finalScore").text("Your score was" + life)
+            $("#exampleModalCenter").modal("toggle")
+            $("saveScore").click(function() {
+                highScores = JSON.parse(localStorage.getItem('highScores')) || []
+                score = {
+                    score: life, 
+                    name: $("#name").val() 
+                };  
+                highScores.push(score);
+                highScores.sort((a, b) => b.score - a.score);
+                highScores.splice(5);
+                localStorage.setItem('highScores', JSON.stringify(highScores));
+                console.log(highScores)
+            })
+        } else {
+            triggerNextQuestion()
+            $("#progressbar > div").width(life + "%")
         }
     }
     )}
+
