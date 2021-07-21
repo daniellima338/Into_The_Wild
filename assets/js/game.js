@@ -74,6 +74,7 @@ function showCorrectAnswer(correct_answer) {
 
         if (correct_answer == selectedAnswer) {
             this.style.backgroundColor = "#a8f1b8"; //green
+            $("#score").text() ++;
         } else {
             this.style.backgroundColor = "#d82929"; //red
             life -= 25;
