@@ -29,11 +29,37 @@
                 <button class="btn btn-primary" id="answer_4">Answer 4</button>
             </div>
         </div>
-        <div class="col-12 score-area">
-            <p class="scores">Correct Answers: <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+    </div>
+    <div class="col-12">
+        <p class="scores">Correct Answers: <span id="score">0</span></p>
+        <div id="progressbar">
+            <div></div>
         </div>
     </div>
+
+    <!-- modal for when you loose -->
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Tutorial</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="final_score"></p>
+              <input type="text" id="name">
+                  
+            </div>
+            <div class="modal-footer">
+              <a href="countdown.html" class="btn btn-secondary" data-dismiss="modal">Play again</a>
+              <a class="btn btn-primary" id="savescore">Save highscore</a>
+            </div>
+          </div>
+        </div>
+        </div>
 
     <footer class="row container-fluid text-center fixed-bottom overlay">  
         <div class="col-4 footer-style">
