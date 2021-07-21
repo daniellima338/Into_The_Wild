@@ -55,19 +55,7 @@ function setupAnswers(current){
     })
     showCorrectAnswer(current.correctAnswer)    
 };
-// Cant get it working
-//  function incrementScore(){
-//      var isCorrect = results.correct_answer;
-//      var incorrect_answers = results.incorrect_answers;
-//      $("button").click(function() {
-//         if (isCorrect) {
-//              $("#score").innerHTML = $("#score") + 1;
-//          } else if (incorrect_answers) {
-//             $("#incorrect").innerHTML = $("#incorrect") + 1;
-//         }
-//      })
 
-//NOT WORKING
 function showCorrectAnswer(correct_answer) {
     $("button").click(function() {
         selectedAnswer = $(this).text()
