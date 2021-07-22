@@ -13,6 +13,7 @@ $.ajax({
 // Globale Variables
 var quizData;
 var currentQuestionId = 0;
+var score = 0;
 var life = 100;
 
 // Used to generate random answer. Taken from stackoverflow: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
@@ -59,14 +60,14 @@ function setupAnswers(current){
       
  }
 
-
-
 function showCorrectAnswer(correct_answer) {
     $("button").click(function() {
         selectedAnswer = $(this).text()
 
         if (correct_answer == selectedAnswer) {
             this.style.backgroundColor = "#a8f1b8"; //green
+            score += 1;
+            $("#score")[0].innerHTML = score;
         } else {
             this.style.backgroundColor = "#d82929"; //red
             life -= 25;
@@ -96,29 +97,6 @@ function showCorrectAnswer(correct_answer) {
         }
     }
     )}
-
-//COUNTDOWN FUNCTION
-const nums = document.querySelectorAll('.nums span');
-const counter = document.querySelector('.center');
-
-runAnimation();
-
-function runAnimation() {
-    nums.forEach((num, idx) => {
-        const penultimate = nums.length - 1;
-        num.addEventListener('animationend', (e) => {
-            if(e.animationName === 'goIn' && idx !== penultimate){
-                num.classList.remove('in');
-                num.classList.add('out');
-            } else if (e.animationName === 'goOut' && num.nextElementSibling){
-                num.nextElementSibling.classList.add('in');
-            } else {
-                counter.classList.add('hide');
-                window.location.href="/play.html";
-            }
-        });
-    });
-}
 
 //EMAIL WORKFLOW 
 function sendMail(contactForm) {
