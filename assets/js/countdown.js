@@ -14,10 +14,8 @@ function runAnimation() {
 				num.nextElementSibling.classList.add('in');
 			} else {
 				counter.classList.add('hide');
-                window.location.href="/play.html";
+                window.location.href="./play.html";
 			}
 		});
 	});
 }
-
-
