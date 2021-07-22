@@ -11,9 +11,8 @@ $.ajax({
 });
 
 // Globale Variables
-
-var current_question_id = 0;
 var quizData;
+var currentQuestionId = 0;
 var life = 100;
 
 // Used to generate random answer. Taken from stackoverflow: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
@@ -27,7 +26,7 @@ function getRandomInt(min, max) {
 // Used to set up the quiz
 function setupQuiz(data){
     quizData = data
-    setupAnswers(data[current_question_id])
+    setupAnswers(quizData[currentQuestionId])
     console.log(quizData)
 };
 
@@ -36,27 +35,31 @@ function setupQuiz(data){
 function triggerNextQuestion() {
     var delayTrigger = 2000;
         setTimeout(function() {
-            current_question_id++
-            setupAnswers(quizData[current_question_id])
+            currentQuestionId++
+                setupAnswers(quizData[currentQuestionId])
         }, delayTrigger);
 }
 
 //Used to generate the answers for each question
 function setupAnswers(current){
-   $("#question").text(current.question)
+    $("#question").text(current.question)
+ 
+     answers = [current.correct_answer]
+                     .concat(current.incorrect_answers)
+                     .sort((_a, _b) => 0.5 - Math.random());
+     
+     var i = 1;
+     answers.forEach(function (answer) {
+         $("#answer_" + i).removeAttr('style');
+         $("#answer_" + i).text(answer)  
+         i++
+     })
+ 
+     showCorrectAnswer(current.correct_answer)
+      
+ }
 
-    answers = [current.correct_answer]
-                    .concat(current.incorrect_answers)
-                    .sort((_a, _b) => 0.5 - Math.random());
-    
-    var i = 1;
-    answers.forEach(function (answer) {
-        $("#answer_" + i).removeAttr("style");
-        $("#answer_" + i).text(answer)  
-        i++
-    })
-    showCorrectAnswer(current.correctAnswer)    
-};
+
 
 function showCorrectAnswer(correct_answer) {
     $("button").click(function() {
@@ -64,7 +67,6 @@ function showCorrectAnswer(correct_answer) {
 
         if (correct_answer == selectedAnswer) {
             this.style.backgroundColor = "#a8f1b8"; //green
-            $("#score").text() ++;
         } else {
             this.style.backgroundColor = "#d82929"; //red
             life -= 25;
@@ -95,6 +97,29 @@ function showCorrectAnswer(correct_answer) {
     }
     )}
 
+//COUNTDOWN FUNCTION
+const nums = document.querySelectorAll('.nums span');
+const counter = document.querySelector('.center');
+
+runAnimation();
+
+function runAnimation() {
+    nums.forEach((num, idx) => {
+        const penultimate = nums.length - 1;
+        num.addEventListener('animationend', (e) => {
+            if(e.animationName === 'goIn' && idx !== penultimate){
+                num.classList.remove('in');
+                num.classList.add('out');
+            } else if (e.animationName === 'goOut' && num.nextElementSibling){
+                num.nextElementSibling.classList.add('in');
+            } else {
+                counter.classList.add('hide');
+                window.location.href="/play.html";
+            }
+        });
+    });
+}
+
 //EMAIL WORKFLOW 
 function sendMail(contactForm) {
     emailjs.send("service_imbql8k","intoTheWild", {
@@ -111,28 +136,8 @@ function sendMail(contactForm) {
         return false;  // To block from loading a new page
     }  
 
-//COUNTDOWN FUNCTION
-const nums = document.querySelectorAll('.nums span');
-const counter = document.querySelector('.center');
 
-runAnimation();
 
-function runAnimation() {
-	nums.forEach((num, idx) => {
-		const penultimate = nums.length - 1;
-		num.addEventListener('animationend', (e) => {
-			if(e.animationName === 'goIn' && idx !== penultimate){
-				num.classList.remove('in');
-				num.classList.add('out');
-			} else if (e.animationName === 'goOut' && num.nextElementSibling){
-				num.nextElementSibling.classList.add('in');
-			} else {
-				counter.classList.add('hide');
-                window.location.href="/play.html";
-			}
-		});
-	});
-}
 
 
 
