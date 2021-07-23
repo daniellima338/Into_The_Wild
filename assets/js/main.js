@@ -66,23 +66,23 @@ function showCorrectAnswer(correct_answer) {
 
         if (correct_answer == selectedAnswer) {
             this.style.backgroundColor = "#a8f1b8"; //green
-            score += 1;
-            $("#score")[0].innerHTML = score;
+            newScore = score += 1;
+            $("#score")[0].innerHTML = newScore;
         } else {
             this.style.backgroundColor = "#d82929"; //red
             life -= 25;
         }
         $("button").unbind("click"); //unbind is used to reset the color
 
-        //losing the game case
-
-        if (life == 0){
+        //losing the game case. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
+        
+        if (life == 75){
             $("#finalScore").text("Your score was" + life)
             $("#endModal").modal("toggle")
-            $("saveScore").click(function() {
+            $("#saveScore").click(function() {
                 highScores = JSON.parse(localStorage.getItem('highScores')) || []
                 score = {
-                    score: life, 
+                    score: newScore, 
                     name: $("#name").val() 
                 };  
                 highScores.push(score);
@@ -97,6 +97,12 @@ function showCorrectAnswer(correct_answer) {
         }
     }
     )}
+//Show highscores on the highscores board. 
+highScores = JSON.parse(localStorage.getItem('highScores')) || []
+console.log(highScores)
+$("#highScoresList").html(highScores
+    .map(score => {return (`<li class = "high-score">${score.name}  -  ${score.score}<li>`);})
+    .join(""))
 
 //EMAIL WORKFLOW. Taken from Code Institute course
 function sendMail(contactForm) {
@@ -113,6 +119,8 @@ function sendMail(contactForm) {
         });
         return false;  // To block from loading a new page
     }  
+
+
 
 
 
