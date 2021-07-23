@@ -15,6 +15,14 @@
         <div class="col-12 mt-4">
             <h2 id="question" class="jumbotron"></h2>
         </div>
+        <div class="col-12">
+            <p class="scores">Correct Answers:  <span id="score" class="ml-3"> 0</span></p>
+            </div>
+        <div class="col-8 mb-5">
+            <div id="progressbar">
+                <div></div>
+            </div>
+            </div>
         <div class="row">
             <div class="offset-2 col-8">
                 <button class="btn btn-primary" id="answer_1">Answer 1</button>
@@ -29,14 +37,6 @@
                 <button class="btn btn-primary" id="answer_4">Answer 4</button>
             </div>
         </div>
-        <div class="col-12">
-            <p class="scores">Correct Answers: <span id="score">0</span></p>
-            </div>
-            <div class="col-8">
-            <div id="progressbar">
-                <div></div>
-            </div>
-            </div>
     </div>
         
         
@@ -53,17 +53,40 @@
               </button>
             </div>
             <div class="modal-body end-modal">
-              <p id="final_score"></p>
+              <p id="finalScore"></p>
               <input type="text" id="name">
                   
             </div>
             <div class="modal-footer">
                 <a href="countdown.html" class="btn btn-primary">Play Game</a>
-              <a href="index.html" class="btn btn-primary" id="saveScore">Save highscore</a>
+              <a href="index.html" class="btn btn-primary saveScore">Save highscore</a>
             </div>
           </div>
         </div>
+    </div>
+
+    <!-- modal for when you loose. Taken from https://getbootstrap.com/docs/4.6/components/modal/ and modified-->
+
+    <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="end" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="end">You got through the jungle! Well done</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body end-modal">
+              <p id="winScore"></p>
+              <input type="text" class="name">
+            </div>
+            <div class="modal-footer">
+                <a href="countdown.html" class="btn btn-primary">Play Game</a>
+              <a href="index.html" class="btn btn-primary saveScore">Save highscore</a>
+            </div>
+          </div>
         </div>
+    </div>
 
     <footer class="row container-fluid text-center fixed-bottom overlay">  
         <div class="col-4 footer-style">
