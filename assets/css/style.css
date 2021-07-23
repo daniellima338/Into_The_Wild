@@ -241,6 +241,18 @@ animation: goOut .3s ease-in-out;
   color: #f3fff3;
 }
 
+/* Highscore page */
+
+#highScoresList {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  list-style-type: none;
+  font-size: 2rem;
+  
+  
+}
+
   /* footer styles */
 
   .footer-style a {
