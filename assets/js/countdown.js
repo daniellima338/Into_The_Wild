@@ -1,3 +1,4 @@
+// Found here https://code-mentor.org/animated-countdown-in-js-with-source-code/ and modified
 const nums = document.querySelectorAll('.nums span');
 const counter = document.querySelector('.center');
 
