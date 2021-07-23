@@ -76,7 +76,7 @@ function showCorrectAnswer(correct_answer) {
 
         //losing the game case. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
         
-        if (life == 75){
+        if (life == 0){
             $("#finalScore").text("Your score was" + life)
             $("#endModal").modal("toggle")
             $("#saveScore").click(function() {
