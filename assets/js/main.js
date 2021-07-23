@@ -77,13 +77,13 @@ function showCorrectAnswer(correct_answer) {
         //losing the game case. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
         
         if (life == 0){
-            $("#finalScore").text("Your score was" + life)
+            $("#finalScore").text("Your score was" + score)
             $("#endModal").modal("toggle")
-            $("#saveScore").click(function() {
+            $(".saveScore").click(function() {
                 highScores = JSON.parse(localStorage.getItem('highScores')) || []
                 score = {
                     score: newScore, 
-                    name: $("#name").val() 
+                    name: $(".name").val() 
                 };  
                 highScores.push(score);
                 highScores.sort((a, b) => b.score - a.score);
@@ -95,8 +95,25 @@ function showCorrectAnswer(correct_answer) {
             triggerNextQuestion()
             $("#progressbar > div").width(life + "%")
         }
+    });
+    if (score == 10) {
+            $("#winScore").text("Your score was" + score)
+            $("#winModal").modal("toggle")
+            $(".saveScore").click(function() {
+                highScores = JSON.parse(localStorage.getItem('highScores')) || []
+                score = {
+                    score: newScore, 
+                    name: $(".name").val() 
+                };  
+                highScores.push(score);
+                highScores.sort((a, b) => b.score - a.score);
+                highScores.splice(5);
+                localStorage.setItem('highScores', JSON.stringify(highScores));
+                console.log(highScores)
+            })
+        }
     }
-    )}
+    
 //Show highscores on the highscores board. 
 highScores = JSON.parse(localStorage.getItem('highScores')) || []
 console.log(highScores)
