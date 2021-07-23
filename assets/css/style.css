@@ -21,6 +21,15 @@ h1 {
     font-size: 3.6rem;
 }
 
+/* align content */
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 
 /* Buttons */
 .btn {
@@ -31,8 +40,6 @@ h1 {
   color: #f3fff3;
   background-color: rgb(79,133,91);
   border-radius: 25px 75px;
-  
-  
 }
 
 .btn-primary {
@@ -71,6 +78,11 @@ border-color: #f3fff3;
   font-size: 2rem;
 }
 
+.end-modal {
+display: flex;
+justify-content: center;
+}
+
 .modal-footer {
   justify-content: center !important;
 }
@@ -86,6 +98,9 @@ border-color: #f3fff3;
   background-color: black;
   border-radius: 13px; /* (height of inner div) / 2 + padding */
   padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #progressbar > div {
@@ -93,6 +108,9 @@ border-color: #f3fff3;
    width: 100%; /* Adjust with JavaScript */
    height: 20px;
    border-radius: 10px;
+   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Home Page */
@@ -105,13 +123,7 @@ border-color: #f3fff3;
 }
 
 /* coundown page */
-.center {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+
 
 /* Contact page */
 
@@ -137,7 +149,7 @@ border-color: #f3fff3;
 
 /* Play page */
 .box-play {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -152,7 +164,8 @@ border-color: #f3fff3;
 .scores {
   display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: 2rem;
+  color: #f3fff3;
 }
 
   /* footer styles */
