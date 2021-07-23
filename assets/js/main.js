@@ -78,7 +78,7 @@ function showCorrectAnswer(correct_answer) {
 
         if (life == 0){
             $("#finalScore").text("Your score was" + life)
-            $("#exampleModalCenter").modal("toggle")
+            $("#endModal").modal("toggle")
             $("saveScore").click(function() {
                 highScores = JSON.parse(localStorage.getItem('highScores')) || []
                 score = {
@@ -98,7 +98,7 @@ function showCorrectAnswer(correct_answer) {
     }
     )}
 
-//EMAIL WORKFLOW 
+//EMAIL WORKFLOW. Taken from Code Institute course
 function sendMail(contactForm) {
     emailjs.send("service_imbql8k","intoTheWild", {
         "from_name": contactForm.name.value,
