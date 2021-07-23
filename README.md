@@ -25,7 +25,6 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * As a user I want to be entertained by the game I am playing.
 * As a user I want to be able to see how well I did compared to others.
 * As a user I want to be able to learn new things, by playing the game.
-* As a user I want to see the rigth answer to the question, when i have answered.
 * As a user I want to be able to contact the owner, if i have anything to ask about.
 
 
@@ -87,7 +86,8 @@ This way my content will be easily readable.
 <a></a>
 
 #### **Changes made to color scheme**
-
+* I changed the white color in the project from a standard white to a smoother white color. 
+I also changed the standard blue color on hover to a more suitable green color.
 
 <a></a>
 
@@ -155,7 +155,6 @@ You can find my wireframes below:
 
 * A brief description of each correct answer. 
 * A motion into the jungle effect. 
-* 3 lifes and then you are out function. 
 
 [Back to Top](#table-of-contents)
 
@@ -187,18 +186,7 @@ You can find my wireframes below:
 * [GitPod](https://www.gitpod.io/)
 * [Balsamic](https://balsamiq.com/wireframes/)
 * [W3C HTML Validation Service](https://validator.w3.org/)
-* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
-
-[Back to Top](#table-of-contents)
-
-<a></a>
-
-## **Bugs**
-* Answer 4 was not displaying due to a bug in the loop interating through the questions. Fixed it by starting the loop at 1 instead of 0. 
-* Score is not incrementing as expected. Had to change the design of the system. 
-* 1 Could not change anything within the modal for the tutorial. 
- **Solution** 
-* used !important to make my custom style a priority. tried other solutions, but this was the only one that worked. 
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Some bugs and warnings occure due to bootstrap. 
 
 [Back to Top](#table-of-contents)
 
@@ -208,84 +196,87 @@ You can find my wireframes below:
 
 ### A first time visitor to this website
 
-#### User story: 
+#### User story: As a user I want to be entertained by the game I am playing.
 * **Plan** 
+The plan is to make a game that recreates a feeling of going into the jungle. The user needs to get a feeling that they have to be experts about animals to survive. The page has to be easy to navigate, and the game has to be easy to understand. If that is all achieved the user should have a good experience. 
 
 * **Implementation**
-
+The implimentation is setup using a easy navigation system, where it is only possible to go very few roads from the menu. All ways are leading to the beginning of the game. The ideale route should be for the user to read the tutorial first and then play the game. But it should also be possible to play the game without reading the tutorial
 
 * **Test**    
-
+I had 3 people play the game. All of them wanted to play the game again, as they wanted to beat the score they had gotten before. The easy way through the game, made it easy for the users to understand what they should do, and they understood that it was a quiz game. 1 person had a hard time understanding why he died, as he didn't understand he had 4 lives. That maybe has to be clearer. 
 
 * **Result**  
-
+The users felt entertained and they wanted to play again. A single user did not understand how the game worked, and the progressionbar has to be more clear. 
 
 * **Verdict**  
+The game almost passed the userbility test according to the user story. Small changes has to be implimented. 
 
 
-
-#### User story: 
+#### User story: As a user I want to be able to see how well I did compared to others.
 * **Plan** 
-
+The user has to be able to see their score against other users. Here the user has to be able to put in their name and pin their score to a highscore board. 
 
 * **Implementation**  
-
+The user will see a modal when they finish the game. Here the user will be able to put in their name and then save their score to the highscore board. If they wish to not save their score, they can just play the game again. 
 
 * **Test** 
-
+3 users tested the highscore function and all went through the functionality without issues.
 
 * **Result** 
-
+the 3 users tested the game and were all able to put in their score. They found the functionality very easily navigated and they didn't have any issues. 1 user noted that their score was not saved, when they played the game on different devices. That is because it is stored localy. For a future update the score will be stored at a database, but for the moment a local storage is what is available. 
 * **Verdict** 
+The test has passed all the criteria and works like planned.
 
-#### User story: 
+#### User story: As a user I want to be able to learn new things, by playing the game.
 * **Plan** 
-
+The user is supposed to play the game many times to remember the right answers as they go. I expect the user to get some answers right and some wrong, and therefore having to play the game again. 
 
 * **Implementation**
-
+The user will be shown a red button when they answer wrong and a green when they answer right. It is liberatly that the user is not shown the right answer after they get a wrong answer, as they can then play the game more time. 
 
 * **Test**  
- 
+The test the users will go through have to do with the users wanting to play the game again and not asking why they don't see the right answer after answering wrong. 
 
 * **Result** 
-
+ 3 users tested the functionality of the game, and did not comment on why they didn't see the right answer after they answered wrong. On the other hand they wanted to play again, and therefore the idea of the game works. The users then get knowledge by repeating the game many times. 
 
 * **Verdict**  
+The test has passed all the criteria and works like planned.
+ 
 
-
-#### User story:
+#### User story: As a user I want to be able to contact the owner, if i have anything to ask about.
 * **Plan** 
-
-* **Implementation** 
-
-* **Test**   
-
-* **Result**
-
-* **Verdict**    
-
-#### User story: 
-* **Plan** 
+The plan is for the user to be able to contact the owner through a form if they go to the contact page. The contact page is not supposed to be very visible, as it is not a huge part of the application. 
 
 * **Implementation**  
+The user can navigate to the contact form through the footer. Here they will arrive at a form they have to fill out. The form is set up with EmailJS and I will recieve any question they ask along with the email it is send from. 
 
 * **Test** 
+The user had to navigate to the contact form and send an email without help.
 
 * **Result** 
-
+The 3 users that tested the app had no issues finding the navigation to the form, and send and email on without issues. 
 * **Verdict**     
+The user was successfully able to send emails to the email set up to recieve. 
 
 [Back to Top](#table-of-contents)
 
 <a></a>
 
 ## **Bugs**
+### Answer 4 was not displaying due to a bug in the loop interating through the questions. Fixed it by starting the loop at 1 instead of 0. 
+* **Solution** 
+* Fixed it by starting the loop at 1 instead of 0.
+### Could not change anything within the modal for the tutorial.
+* **Solution** 
+* Used !important to make my custom style a priority. tried other solutions, but this was the only one that worked. 
+### The highscore was not displaying on the highscore tab
+* **Solution** 
+* There was an error in the class of the highscore. when fixed the score displayed as expected.
+[Back to Top](#table-of-contents)
 
-### 2
-
-
-### 3
+<a></a>
 
 
 [Back to Top](#table-of-contents)
@@ -303,19 +294,21 @@ I deployed my Ways project website in the following way:
 * In the tab next to "Source", select "/root" if not already selected by default
 * Click save then the page will automatically refresh.
 * The link should show in a banner just above "GitHub Pages" section.
-* This deployed my project to the URL: ()
+* This deployed my project to the URL: (https://daniellima338.github.io/Into_The_Wild/)
 
 [Back to Top](#table-of-contents)
 
 <a></a>
 
 ## **Credits**
+I have drawn much inspiration from different posts on Stackoverflow. Credit is also given to [Michael Karen](https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68), whom i have drawn inspiration from to the functionality of the highscore page. 
 
 ### **Content - Media - Inspiration**
 
 <a></a>
 
 ### **Acknowledgements**
+I want to thank the 3 people who tested the game(Kasper, René and Christina) and gave valuable feedback to optimize the game. 
 
 [Back to Top](#table-of-contents)
 
