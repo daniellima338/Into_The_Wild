@@ -33,7 +33,7 @@ h1 {
 
 /* Buttons */
 .btn {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem 6rem;
   margin-bottom: 1.5rem;
   text-decoration: none;
@@ -114,7 +114,7 @@ justify-content: center;
     align-items: center;
 }
 
-/* countdown */
+/* countdown page */
 .counter.hide {
   transform: translate(-50%, -50%) scale(0);
   animation: hide .2s ease-out;
@@ -189,7 +189,6 @@ animation: goOut .3s ease-in-out;
 }
 }
 
-
 /* Contact page */
 
 .form-control {
@@ -214,7 +213,7 @@ animation: goOut .3s ease-in-out;
 
 /* Play page */
 .box-play {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -241,8 +240,6 @@ animation: goOut .3s ease-in-out;
   text-align: center;
   list-style-type: none;
   font-size: 2rem;
-  
-  
 }
 
   /* footer styles */
@@ -258,7 +255,6 @@ animation: goOut .3s ease-in-out;
     
     display: flex;
     align-items: center;
-    
   }
 
 

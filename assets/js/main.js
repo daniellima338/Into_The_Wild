@@ -16,7 +16,8 @@ var currentQuestionId = 0;
 var score = 0;
 var life = 100;
 
-// Used to generate random answer. Taken from stackoverflow: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
+// Used to generate random answer. 
+//Taken from stackoverflow: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -55,9 +56,7 @@ function setupAnswers(current){
          $("#answer_" + i).text(answer)  
          i++
      })
- 
-     showCorrectAnswer(current.correct_answer)
-      
+     showCorrectAnswer(current.correct_answer) 
  }
 
 function showCorrectAnswer(correct_answer) {
@@ -114,7 +113,7 @@ function showCorrectAnswer(correct_answer) {
         }
     }
     
-//Show highscores on the highscores board. 
+//Show highscores on the highscores board. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
 highScores = JSON.parse(localStorage.getItem('highScores')) || []
 console.log(highScores)
 $("#highScoresList").html(highScores
