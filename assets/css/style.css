@@ -94,17 +94,9 @@ justify-content: center;
 }
 
 /* progressbar styles */
-#progressbar {
-  background-color: black;
-  border-radius: 13px; /* (height of inner div) / 2 + padding */
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #progressbar > div {
-   background-color: orange;
+   background-color: #D82929;
    width: 100%; /* Adjust with JavaScript */
    height: 20px;
    border-radius: 10px;
