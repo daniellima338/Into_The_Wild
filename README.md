@@ -55,19 +55,19 @@ If you have any feedback or questions, head over to my GitHub contact details an
 
 ### **User Stories**
 
-#### **User**
+#### User
 * As a user I want to be entertained by the game I am playing.
 * As a user I want to be able to see how well I did compared to others.
 * As a user I want to be able to learn new things, by playing the game.
 * As a user I want to be able to contact the owner, if i have anything to ask about.
 
-#### **Owner** 
+#### Owner
 * As a owner I want people to strenghten their general knowledge.
 * As a owner I want people to easily follow how to play the game.
 * As a owner I want the game to be entertaining.
 * As a owner I want people to play more than one round of the game. 
 
-#### **User Expectations**
+#### User Expectations
 * Easy to navigate.
 * Flow of the sign up process takes a short time.
 * Understand the purpose of the webiste within a short time.
@@ -79,13 +79,13 @@ If you have any feedback or questions, head over to my GitHub contact details an
 
 ## **Design Choices**
 
-### **Fonts**
+### Fonts
  I have visited [Google Fonts](https://fonts.google.com/ "Google Fonts") to explore the various options. The fonts used in this project are [Raleway] (https://fonts.google.com/specimen/Raleway) for the overall text and [Fira Sans] (https://fonts.google.com/specimen/Fira+Sans#standard-styles) for the headlines. The fonts have a light readthrough and do not come of as strong to the eye. It goes well in line with the hip and light design of the website. 
 
-### **Icons**
+### Icons
 I have used icons from the [Font Awesome library](https://fontawesome.com/ "Font Awesome"). It is a limited amount of icons. But they fit the corresponding text. 
 
-### **Colors**
+### Colors
 
 You can view my color scheme [here](assets/images/colors.png)
 
@@ -106,7 +106,7 @@ The feel of the game should be to step into a jungle and then get to know the di
 I have used to contract checker on Coolors in order to make sure that the contract is sufficient.
 This way my content will be easily readable. 
 
-#### **Changes made to color scheme**
+#### Changes made to color scheme
 * I changed the white color in the project from a standard white to a smoother white color. 
 I also changed the standard blue color on hover to a more suitable green color.
 
@@ -120,26 +120,22 @@ The website structure is built with [Bootstrap](https://getbootstrap.com/).
 Bootstrap provides content for both CSS and JavaScript, as functionality with both is important.
 As Bootstrap is designed for mobile first, I will be certain that my website functions well on mobile. 
 
-### **Home Page**
+### Home Page
 The home page is kept very simple, with only options to play the game, view highscores or to view the tutorial. 
 In the bottom there will also be options to contact owner or go back to the start. THe CTA is for the user to easily understand the game, and then fast get started.
 
-### **Countdown Page** 
+### Countdown Page
 The countdown page has the same style as the others. The only function is to countdown to the game begins. 
 
-### **Quiz Page**
+### Quiz Page
 Again the look will be simple, and the focus will be on the game. The user will see the question and have 4 different answers to choose from. They will be able to see their score in the bottom. There will again be opportunity to contact owner or go back to the home page.  
 
-### **High Score** 
+### High Score 
 The High Score page will keep the users scores, and show who is the best. 
 
-### **Tutorial**
+### Tutorial
 The tutorial will have the same design as the other pages. Here there will be 3 steps, that will quickly and easily tell the user what they need to do, to play the game. 
 
-[Back to Top](#table-of-contents)
-
-<a></a>
---- 
 
 ### **Wireframes**
 I have decided to use [Balsamic](https://balsamiq.com/wireframes/) to create wireframes for my website. 
@@ -148,28 +144,28 @@ First I created a wireframe for mobile, as the approach is mobile first. Thereaf
 
 You can find my wireframes below:
 
-#### ** Desktop Wireframes **
+#### Desktop Wireframes 
 * [Home page](wireframes/desktop/home-page.png)
 * [Quiz page](wireframes/desktop/play-page.png)
 * [Tutorial page](wireframes/desktop/tutorial-page.png)
 * [Countdown page](wireframes/desktop/countdown-page.png)
 * [Contact page](wireframes/desktop/contact-page.png)
 
-#### ** Tablet Wireframes **
+#### Tablet Wireframes
 * [Home page](wireframes/tablet/tablet-home-page.png)
 * [Quiz page](wireframes/tablet/tablet-play-page.png)
 * [Tutorial page](wireframes/tablet/tablet-tutorial-page.png)
 * [Countdown page](wireframes/tablet/tablet-countdown-page.png)
 * [Contact page](wireframes/tablet/tablet-contact-page.png)
 
-#### ** Mobile Wireframes **
+#### Mobile Wireframes 
 * [Home page](wireframes/mobile/mobile-home-page.png)
 * [Quiz page](wireframes/mobile/mobile-play-page.png)
 * [Tutorial page](wireframes/mobile/mobile-tutorial-page.png)
 * [Countdown page](wireframes/mobile/mobile-countdown-page.png)
 * [Contact page](wireframes/mobile/mobile-contact-page.png)
 
-### **Features to be implemented**
+### Features to be implemented
 
 * A brief description of each correct answer. 
 * A motion into the jungle effect. 
@@ -181,20 +177,20 @@ You can find my wireframes below:
 
 ## **Technologies used**
 
-### **Languages**
+### Languages
 
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-### **Libraries & Frameworks**
+### Libraries & Frameworks
 
 * [Font Awesome](https://fontawesome.com/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Google Fonts](https://fonts.google.com/)
 * [Jquery](https://jquery.com/)
 
-### **Tools**
+### Tools
 * [Git](https://git-scm.com/)
 * [GitPod](https://www.gitpod.io/)
 * [Balsamic](https://balsamiq.com/wireframes/)
@@ -209,7 +205,7 @@ You can find my wireframes below:
 ## **Testing**
 
 #### User story: As a user I want to be entertained by the game I am playing.
-* **Plan** 
+* **Plan**
 The plan is to make a game that recreates a feeling of going into the jungle. The user needs to get a feeling that they have to be experts about animals to survive. The page has to be easy to navigate, and the game has to be easy to understand. If that is all achieved the user should have a good experience. 
 
 * **Implementation**
@@ -310,7 +306,7 @@ I deployed my Ways project website in the following way:
 I have drawn much inspiration from different posts on Stackoverflow. Credit is also given to [Michael Karen](https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68), whom i have drawn inspiration from to the functionality of the highscore page. 
 
 ### **Acknowledgements**
-I want to thank the 3 people who tested the game(Kasper, René and Christina) and gave valuable feedback to optimize the game. 
+I want to thank the 3 people who tested the game(Kasper, René and Christina). They gave valuable feedback to optimize the game. 
 
 [Back to Top](#table-of-contents)
 
