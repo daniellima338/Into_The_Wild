@@ -269,15 +269,22 @@ The 3 users that tested the app had no issues finding the navigation to the form
 The user was successfully able to send emails to the email set up to recieve. 
 
 ### **Bugs**
+
 ### Answer 4 was not displaying due to a bug in the loop interating through the questions. Fixed it by starting the loop at 1 instead of 0. 
 * **Solution** 
 * Fixed it by starting the loop at 1 instead of 0.
+
 ### Could not change anything within the modal for the tutorial.
 * **Solution** 
 * Used !important to make my custom style a priority. tried other solutions, but this was the only one that worked. 
+
 ### The highscore was not displaying on the highscore tab
 * **Solution** 
 * There was an error in the class of the highscore. when fixed the score displayed as expected.
+
+### quotation-marks in the question were rendered as &quote. 
+* **Solution** 
+* Changed the rendering from JS to HTML and then it was fixed.
 
 [Back to Top](#table-of-contents)
 
