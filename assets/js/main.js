@@ -104,14 +104,14 @@ function showCorrectAnswer(correct_answer) {
         $("button").unbind("click"); //unbind is used to reset the color
         $("#progressbar > div").width(life + "%")
 
-        if (life == 75) {
+        if (life == 0) {
             modalDisplay("#endModal")
             $("#titleText").text("You died in the jungle!")
         } else {
             triggerNextQuestion()
         }
     });
-    if (score == 2) {
+    if (score == 10) {
         modalDisplay("#endModal")
         $("#titleText").text("You got through the jungle. Well done!")
     }
