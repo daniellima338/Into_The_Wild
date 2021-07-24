@@ -43,42 +43,19 @@
 
     <!-- modal for when you loose. Taken from https://getbootstrap.com/docs/4.6/components/modal/ and modified-->
 
-    <div class="modal fade" id="endModal" tabindex="-1" role="dialog" aria-labelledby="end" aria-hidden="true">
+    <div class="modal fade" id="endModal"  tabindex="-1" role="dialog" aria-labelledby="end" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="end">You died in the jungle!</h5>
+              <h5 class="modal-title" id="titleText"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body end-modal">
-              <p id="finalScore"></p>
+              <p id="finalMessage"></p>
               <input type="text" id="name">
                   
-            </div>
-            <div class="modal-footer">
-                <a href="countdown.html" class="btn btn-primary">Play Game</a>
-              <a href="index.html" class="btn btn-primary saveScore">Save highscore</a>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <!-- modal for when you loose. Taken from https://getbootstrap.com/docs/4.6/components/modal/ and modified-->
-
-    <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="end" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-center" id="end">You got through the jungle! Well done</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body end-modal">
-              <p id="winScore"></p>
-              <input type="text" class="name">
             </div>
             <div class="modal-footer">
                 <a href="countdown.html" class="btn btn-primary">Play Game</a>
