@@ -38,7 +38,7 @@ function setupQuiz(data) {
 // so the user is able to see if he answered right or wrong
 
 function triggerNextQuestion() {
-    var delayTrigger = 2000;
+    var delayTrigger = 1000;
     setTimeout(function() {
         currentQuestionId++
         setupAnswers(quizData[currentQuestionId])
@@ -104,7 +104,7 @@ function showCorrectAnswer(correct_answer) {
         $("button").unbind("click"); //unbind is used to reset the color
         $("#progressbar > div").width(life + "%")
 
-        if (life == 75) {
+        if (life == 0) {
             modalDisplay("#endModal")
             $("#titleText").text("You died in the jungle!")
         } else {
