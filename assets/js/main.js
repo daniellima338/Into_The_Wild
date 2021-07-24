@@ -82,7 +82,7 @@ function storeScores(newScore, playername) {
 
 // Displays modal for the user
 function modalDisplay(modalName) {
-    $("#finalMessage").text("Your score was" + score)
+    $("#finalMessage").text("Your score was"   + score)
     $(modalName).modal("toggle")
     $(".saveScore").click(function() {
         storeScores(score, $("#name").val())
@@ -104,7 +104,7 @@ function showCorrectAnswer(correct_answer) {
         $("button").unbind("click"); //unbind is used to reset the color
         $("#progressbar > div").width(life + "%")
 
-        if (life == 0) {
+        if (life == 75) {
             modalDisplay("#endModal")
             $("#titleText").text("You died in the jungle!")
         } else {
