@@ -49,7 +49,7 @@ function triggerNextQuestion() {
 //Used to generate the answers for each question
 
 function setupAnswers(current){
-    $("#question").text(current.question)
+    $("#question").html(current.question)
  
      answers = [current.correct_answer]
                      .concat(current.incorrect_answers)
