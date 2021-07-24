@@ -30,6 +30,10 @@ h1 {
   text-align: center;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 /* Buttons */
 .btn {
@@ -57,6 +61,14 @@ border-color: #f3fff3;
   background-color: #1b442a;
   border-color: #f3fff3;
   box-shadow: 0 0 0 0.2rem rgb(31 83 46 / 70%);
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-left: 1rem;
 }
 
 /* Title */
@@ -91,6 +103,12 @@ justify-content: center;
   color: #1b442a !important;
   font-size: 3rem;
   font-weight: 700;
+  display: flex;
+  justify-content: center !important;
+}
+
+.modal-content {
+  border-radius: .5rem;
 }
 
 /* progressbar styles */
