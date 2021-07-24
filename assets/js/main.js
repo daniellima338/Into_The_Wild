@@ -57,12 +57,36 @@ function setupAnswers(current){
      
      var i = 1;
      answers.forEach(function (answer) {
-         $("#answer_" + i).removeAttr('style');
-         $("#answer_" + i).html(answer)  
+         var answerButton = $("#answer_" + i)
+         answerButton.removeAttr('style');
+         answerButton.html(answer)  
          i++
      })
      showCorrectAnswer(current.correct_answer) 
  }
+
+// Stores the scores after a game if finished
+function storeScores (newScore, playername) {
+            var highScores = JSON.parse(localStorage.getItem('highScores')) || []
+            var score = {
+                    score: newScore, 
+                    name: playername
+                };  
+                highScores.push(score);
+                highScores.sort((a, b) => b.score - a.score);
+                highScores.splice(5);
+                localStorage.setItem('highScores', JSON.stringify(highScores));
+                console.log(highScores)
+};
+
+// Displays modal for the user
+function modalDisplay(modalName) {
+$("#finalScore").text("Your score was" + score)
+            $(modalName).modal("toggle")
+            $(".saveScore").click(function() {
+                storeScores(score, $("#name").val())
+            })
+        }
 
 function showCorrectAnswer(correct_answer) {
     $("button").click(function() {
@@ -82,39 +106,13 @@ function showCorrectAnswer(correct_answer) {
         //losing the game case. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
         
         if (life == 0){
-            $("#finalScore").text("Your score was" + score)
-            $("#endModal").modal("toggle")
-            $(".saveScore").click(function() {
-                highScores = JSON.parse(localStorage.getItem('highScores')) || []
-                score = {
-                    score: newScore, 
-                    name: $(".name").val() 
-                };  
-                highScores.push(score);
-                highScores.sort((a, b) => b.score - a.score);
-                highScores.splice(5);
-                localStorage.setItem('highScores', JSON.stringify(highScores));
-                console.log(highScores)
-            })
-        } else {
+            modalDisplay("#endModal")
+            } else {
             triggerNextQuestion()
         }
     });
     if (score == 10) {
-            $("#winScore").text("Your score was" + score)
-            $("#winModal").modal("toggle")
-            $(".saveScore").click(function() {
-                highScores = JSON.parse(localStorage.getItem('highScores')) || []
-                score = {
-                    score: newScore, 
-                    name: $(".name").val() 
-                };  
-                highScores.push(score);
-                highScores.sort((a, b) => b.score - a.score);
-                highScores.splice(5);
-                localStorage.setItem('highScores', JSON.stringify(highScores));
-                console.log(highScores)
-            })
+        modalDisplay("#winModal")
         }
     }
     
