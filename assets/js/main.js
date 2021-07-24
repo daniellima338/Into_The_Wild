@@ -1,6 +1,7 @@
 // GAME
 
 // Used to get the data
+
 $.ajax({
     type: "GET",
     url: 'https://opentdb.com/api.php?amount=20&category=27&type=multiple',
@@ -11,6 +12,7 @@ $.ajax({
 });
 
 // Globale Variables
+
 var quizData;
 var currentQuestionId = 0;
 var score = 0;
@@ -26,6 +28,7 @@ function getRandomInt(min, max) {
 }
 
 // Used to set up the quiz
+
 function setupQuiz(data){
     quizData = data
     setupAnswers(quizData[currentQuestionId])
@@ -34,6 +37,7 @@ function setupQuiz(data){
 
 // Used to trigger next question with a delay, 
 // so the user is able to see if he answered right or wrong
+
 function triggerNextQuestion() {
     var delayTrigger = 2000;
         setTimeout(function() {
@@ -43,6 +47,7 @@ function triggerNextQuestion() {
 }
 
 //Used to generate the answers for each question
+
 function setupAnswers(current){
     $("#question").text(current.question)
  
@@ -113,7 +118,9 @@ function showCorrectAnswer(correct_answer) {
         }
     }
     
-//Show highscores on the highscores board. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
+//Show highscores on the highscores board. Inspiration taken from: 
+//https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
+
 highScores = JSON.parse(localStorage.getItem('highScores')) || []
 console.log(highScores)
 $("#highScoresList").html(highScores
@@ -121,6 +128,7 @@ $("#highScoresList").html(highScores
     .join(""))
 
 //EMAIL WORKFLOW. Taken from Code Institute course
+
 function sendMail(contactForm) {
     emailjs.send("service_imbql8k","intoTheWild", {
         "from_name": contactForm.name.value,
