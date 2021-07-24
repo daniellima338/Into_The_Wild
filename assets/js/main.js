@@ -58,7 +58,7 @@ function setupAnswers(current){
      var i = 1;
      answers.forEach(function (answer) {
          $("#answer_" + i).removeAttr('style');
-         $("#answer_" + i).text(answer)  
+         $("#answer_" + i).html(answer)  
          i++
      })
      showCorrectAnswer(current.correct_answer) 
@@ -77,6 +77,7 @@ function showCorrectAnswer(correct_answer) {
             life -= 25;
         }
         $("button").unbind("click"); //unbind is used to reset the color
+        $("#progressbar > div").width(life + "%")
 
         //losing the game case. Inspiration taken from: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
         
@@ -97,7 +98,6 @@ function showCorrectAnswer(correct_answer) {
             })
         } else {
             triggerNextQuestion()
-            $("#progressbar > div").width(life + "%")
         }
     });
     if (score == 10) {
